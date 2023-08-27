@@ -6,5 +6,4 @@ export default defineConfig({
         assets: true,
     },
     site: 'https://pranavtaysheti.github.io',
-    base: '/PTBlog',
 });
