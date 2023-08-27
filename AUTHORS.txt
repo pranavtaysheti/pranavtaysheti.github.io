@@ -1,0 +1,7 @@
+<a href="https://www.freepik.com/search?format=search&last_filter=query&last_value=Linkedin&query=Linkedin&type=icon">Icon by riajulislam</a>
+<a href="https://www.freepik.com/search?format=search&last_filter=query&last_value=Github&query=Github&type=icon">Icon by Pixel perfect</a>
+<a href="https://www.freepik.com/search?format=search&last_filter=query&last_value=Email&query=Email&type=icon">Icon by Freepik</a>
+
+<a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Pixel perfect - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Pixel perfect - Flaticon</a>
