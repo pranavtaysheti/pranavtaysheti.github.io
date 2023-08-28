@@ -61,10 +61,10 @@ const socialLinks: Array<SocialLink> = [
         <ul>
           {
             navLinks.map(({ name, link }) => {
-              const className = link === currentURL ? "active" : "";
+              const className = "link ".concat(link === currentURL ? "active" : "");
               return (
                 <li class={className}>
-                  <a href={link} class={className}>
+                  <a href={link}>
                     {name}
                   </a>
                 </li>
@@ -75,7 +75,7 @@ const socialLinks: Array<SocialLink> = [
           {
             socialLinks.map(({ link, icon }) => {
               return (
-                <li>
+                <li class="link">
                   <a href={link} target="_blank">
                     <img src={icon} height="24" />
                   </a>
@@ -123,24 +123,25 @@ const socialLinks: Array<SocialLink> = [
     padding-left: 55px;
     padding-right: 55px;
   }
-  nav ul li {
+  nav ul li.link {
     text-transform: uppercase;
     font-size: large;
     font-family: Roboto Slab;
-    padding: 6px;
+    padding: 8px;
     font-weight: 500;
     color: red;
-    border: 2px solid black;
   }
-  nav ul li.active {
+  nav ul li.link.active {
+    padding: 6px;
     border: 2px solid white;
   }
   nav ul li.seperator {
     flex-grow: 1;
     flex-shrink: 1;
   }
-  nav ul li:active {
-    border-color: brown;
+  nav ul li.link:active {
+    padding: 6px;
+    border: 2px solid brown;
   }
   header div {
     background-color: red;
@@ -148,22 +149,22 @@ const socialLinks: Array<SocialLink> = [
     height: 4px;
     margin: 0px;
   }
-  nav ul li a:link {
+  nav ul li.link a:link {
     color: red;
     text-decoration: none;
   }
-  nav ul li a:visited {
+  nav ul li.link a:visited {
     color: red;
     text-decoration: none;
   }
-  nav ul li a:hover {
+  nav ul li.link a:hover {
     text-decoration: underline dotted;
     text-underline-offset: 6px;
   }
-  nav ul li a.active {
+  nav ul li.link.active a {
     color: white;
   }
-  nav ul li a:active {
+  nav ul li.link a:active {
     color: brown;
     text-decoration: underline;
     text-underline-offset: 6px;
