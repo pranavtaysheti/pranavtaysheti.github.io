@@ -2,12 +2,13 @@
 import email from "@assets/email.png";
 import github from "@assets/github.png";
 import linkedin from "@assets/linkedin.png";
+import background from "@assets/white-texture.jpg"
 
 interface Props {
   title: string;
 }
 
-const currentURL = new URL(Astro.request.url).pathname
+const currentURL = new URL(Astro.request.url).pathname;
 const { title } = Astro.props;
 
 type Link = {
@@ -54,6 +55,7 @@ const socialLinks: Array<SocialLink> = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.svg" />
     <title>{"Pranav Taysheti's ".concat(title)}</title>
+    <link rel="background" 
   </head>
   <body>
     <header>
@@ -61,12 +63,12 @@ const socialLinks: Array<SocialLink> = [
         <ul>
           {
             navLinks.map(({ name, link }) => {
-              const className = "link ".concat(link === currentURL ? "active" : "");
+              const className = "link ".concat(
+                link === currentURL ? "active" : ""
+              );
               return (
                 <li class={className}>
-                  <a href={link}>
-                    {name}
-                  </a>
+                  <a href={link}>{name}</a>
                 </li>
               );
             })
@@ -101,9 +103,11 @@ const socialLinks: Array<SocialLink> = [
   body {
     margin: 0%;
     background-color: whitesmoke;
+    background-image: url("src/assets/white-texture.jpg");
   }
   header {
     margin: 0%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   nav {
     background-color: black;
