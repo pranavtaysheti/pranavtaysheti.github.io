@@ -1,0 +1,121 @@
+Name: Pranav Taysheti
+Short Description: A graduate mechanical engineer.
+Long Description:
+  Freshly completed B.Tech Mechanical Engineering at Manipal Institute of
+  Technology,Manipal with wide range of knowledge and experience in project and
+  finance management, programming, SQL, CAD Modelling, etc. Ready to learn new
+  skills and improve.
+
+Contact:
+  Email: pranavtaysheti@gmail.com
+  Phone: "+91-888-8610-933"
+  Address:
+    Warje, 411058
+    Pune, India
+
+Work experience:
+  
+  - Position: CAD Intern
+    Company: Veeresha Castings Pvt. Ltd.
+    Description:
+      - Developed CAD models for castings for parts in production in 2 formats - 
+        post machining and pre machining.
+    Start month: 08
+    Start year: 2022
+    End month: 12
+    End year: 2022
+  
+Education:
+
+  - Degree: B.Tech
+    Specialization: Mechanical Engineering
+    College: Manipal Institute of Technology
+    University: Manipal Academy of Higher Education
+    Start month: 08
+    Start year: 2018
+    End month: 06
+    End year: 2022
+
+Skills:
+
+  - Programming:
+    - Python language
+    - C language
+    - JavaScript language
+    - Nim language
+    - React, Redux Stack
+    - SQL (PostgreSQL)
+  
+  - Mechanical:
+    - SolidWorks
+    - Microsoft Excel
+    - Operations
+
+Languages:
+
+  - Language: Marathi
+    Speak: Yes
+    Read: Yes
+    Write: No
+  
+  - Language: Kannada
+    Speak: Yes
+    Read: No
+    Write: No
+  
+  - Language: Hindi
+    Speak: Yes
+    Read: Yes
+    Write: Yes
+  
+  - Language: English
+    Speak: Yes
+    Read: Yes
+    Write: Yes
+
+Publications:
+
+  - Name: 
+      Aqua-Vision (An underwater panoramic camera with computer vision and 
+      analytics.
+    Journal:
+      "Journal of Physics: Conference Series, Volume 2161, 28-30 
+      October 2021, Manipal, India"
+
+Projects:
+
+  - Software Projects:
+
+      - Name: ForkGlowy
+        Source Code: pranavtaysheti/forkglowy
+        Hosting: https://forkglowy.web.app/
+        Description:
+          An attempt at building task management app on firebase backend.
+        Stack: 
+          - React
+          - Redux Toolkit
+          - Wouter
+          - Firebase
+          - Bootstrap 5
+          - Vite
+        Features: 
+          - Authentication system, Optimistic UI
+          - Add, delete and edit tasks - automatic sync with backend.
+        
+      - Name: NimCalculator
+        Source Code: pranavtaysheti/nimcalculator
+        Description:
+          A "complex number" calculator programmed in nim language, does 
+          calculations considering BODMAS rules.
+          
+          Example - "22 + 3i*4i" will return 10.
+      
+      - Name: PySnake
+        Source Code: pranavtaysheti/PySnake
+        Description:
+          A simple clone of snake game on old nokia phones using python and 
+          pygame library.
+        
+      - Name: pranavtaysheti.github.io
+        Source Code: pranavtaysheti/pranavtaysheti.github.io
+        Hosting: pranavtaysheti.github.io
