@@ -5,11 +5,12 @@ My Personal Homepage and Blog.
 ## TODOs
 
 - [ ] Homepage
+  - [ ] Manually updating page
+    - [ ] Make HTML Template
   - [ ] Use Linkedin API to `GET` profile
       Documentation: [API Documentation](https://learn.microsoft.com/en-us/linkedin/shared/integrations/people/profile-api?context=linkedin%2Fconsumer%2Fcontext#retrieve-current-members-profile)
-  - [ ] Make HTML Template.
-  - [ ] Convert profile JSON to HTML
-  - [ ] (Optional) Check if its posible to setup github actions to automatically update page when
+    - [ ] Convert profile JSON to HTML
+    - [ ] (Optional) Check if its posible to setup github actions to automatically update page when
         linkedin profile is updated?
 
 - [ ] Blog (Draft Plan)
