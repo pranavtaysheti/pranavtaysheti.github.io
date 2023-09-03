@@ -1,11 +1,11 @@
 ---
-import Post from "@components/Post.astro";
+import { getEntry } from "astro:content";
+import Profile from "@components/Profile.astro";
 import Page from "@layouts/Page.astro";
-const name = "Pranav Taysheti"
-const short_description = "Mechanical Engineer turning into FullStack Developer"
 
+const ptProfile = await getEntry("profile", "pranavtaysheti")
 ---
 
 <Page title="Home">
-    <Post />
+    <Profile profile={ptProfile}/>
 </Page>
