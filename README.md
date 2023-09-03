@@ -6,7 +6,7 @@ My Personal Homepage and Blog. Very moch a work in progress RN.
 
 - [ ] Homepage
   - [ ] Manually updating page
-    - [ ] Astro collections
+    - [x] Astro collections
     - [ ] Make HTML Template
   - [ ] Use Linkedin API to `GET` profile
       Documentation: [API Documentation](https://learn.microsoft.com/en-us/linkedin/shared/integrations/people/profile-api?context=linkedin%2Fconsumer%2Fcontext#retrieve-current-members-profile)
