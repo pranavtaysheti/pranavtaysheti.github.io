@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.2",
-    "astro": "^4.11.3"
+    "astro": "^4.11.5"
   },
   "devDependencies": {
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   }
 }
