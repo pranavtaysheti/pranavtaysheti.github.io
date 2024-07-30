@@ -1,17 +1,17 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  profile: CollectionEntry<"profile">
+  profile: CollectionEntry<"profile">;
 }
 
-const ptProfile = Astro.props
+const ptProfile = Astro.props;
 ---
+
 <div>
   <h1 class="name">{ptProfile.profile.data.Name}</h1>
 </div>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
   div {
     background-color: whitesmoke;
     width: 80%;
