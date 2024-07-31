@@ -1,0 +1,14 @@
+---
+import type { MDXLayoutProps } from "astro";
+import Page from "./Page.astro";
+
+type Props = MDXLayoutProps<{
+  title: string;
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<Page title={frontmatter.title}>
+  <slot />
+</Page>

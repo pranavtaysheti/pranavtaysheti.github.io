@@ -1,8 +1,14 @@
 ---
 import Chrome from "@layouts/Chrome.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<Chrome title="Home">
+<Chrome title={title}>
   <div class="w-full flex flex-row min-h-96 justify-center">
     <div
       class="bg-slate-800 border border-slate-200 p-6 my-6 lg:my-20 lg:p-20 lg:w-5xl"
