@@ -9,11 +9,13 @@ const { title } = Astro.props;
 ---
 
 <Chrome title={title}>
-  <div class="w-full flex flex-row min-h-96 justify-center">
+  <div class="w-full flex flex-row justify-center">
     <div
-      class="bg-slate-800 border border-slate-200 p-6 my-6 lg:my-20 lg:p-20 lg:w-5xl"
+      class="bg-slate-800 border w-full border-slate-200 p-6 my-6 lg:my-20 lg:p-20 lg:w-5xl lg:max-w-4xl flex flex-row justify-center"
     >
-      <article class="prose prose-invert prose-slate font-JetBrains-Mono">
+      <article
+        class="prose prose-invert prose-slate font-JetBrains-Mono w-full"
+      >
         <slot />
       </article>
     </div>
