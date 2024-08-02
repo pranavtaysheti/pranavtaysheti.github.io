@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,7 +18,7 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
-    <title>{"PT | ".concat(title)}</title>
+    <title>{`PT | ${title}`}</title>
   </head>
   <body class="bg-slate-900">
     <header
