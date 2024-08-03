@@ -3,12 +3,11 @@ interface Props {
   link: string;
 }
 
-const pathName = new URL(Astro.request.url).pathname;
 const { link } = Astro.props;
 ---
 
 <a
-  class={pathName === "/blog"
+  class={Astro.url.pathname === `${link}/`
     ? "font-bold text-slate-200 text-lg underline"
     : "font-bold text-slate-400 text-lg"}
   href={link}>{link}</a
