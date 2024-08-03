@@ -1,8 +1,11 @@
 ---
-import Page from "@layouts/Page.astro";
+import MetaPage from "@layouts/MetaPage.astro";
 ---
 
-<Page>
-  <h1>Error 404</h1>
-  <p>Page Not Found</p>
-</Page>
+<MetaPage title="404">
+  <h1 class="font-extrabold text-4xl text-slate-50 underline mb-6">
+    Error 404
+  </h1>
+
+  <p class="text-slate-100">Page Not Found</p>
+</MetaPage>

@@ -1,0 +1,17 @@
+---
+import Page from "./Page.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Page title={title}>
+  <div class="flex flex-row justify-center w-full">
+    <div class="w-full max-w-prose">
+      <slot />
+    </div>
+  </div>
+</Page>

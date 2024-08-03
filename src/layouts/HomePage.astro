@@ -1,6 +1,6 @@
 ---
 import type { MDXLayoutProps } from "astro";
-import Page from "./Page.astro";
+import ProsePage from "./ProsePage.astro";
 
 type Props = MDXLayoutProps<{
   title: string;
@@ -9,6 +9,6 @@ type Props = MDXLayoutProps<{
 const { frontmatter } = Astro.props;
 ---
 
-<Page title={frontmatter.title}>
+<ProsePage title={frontmatter.title}>
   <slot />
-</Page>
+</ProsePage>
