@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 const allBlogPosts = await getCollection("blog");
 ---
 
-<MetaPage title="blog">
+<MetaPage title="Blog">
   <h1 class="text-4xl text-slate-50 font-extrabold mb-8">Blog</h1>
   {allBlogPosts.map((post) => <BlogCard post={post} />)}
 </MetaPage>
