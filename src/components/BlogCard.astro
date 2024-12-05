@@ -11,7 +11,7 @@ const { post } = Astro.props;
 <div>
   <div class="mb-2">
     <h2 class="text-slate-50 text-2xl underline underline-offset-2 font-bold">
-      <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+      <a href={`/blog/${post.id}`}>{post.data.title}</a>
     </h2>
     <p class="text-slate-400">
       {

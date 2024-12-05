@@ -4,14 +4,15 @@ import type {
   InferGetStaticParamsType,
   InferGetStaticPropsType,
 } from "astro";
-import { getCollection } from "astro:content";
+
+import { getCollection, render } from "astro:content";
 import MetaPage from "@layouts/MetaPage.astro";
 
 export const getStaticPaths = (async () => {
   const posts = await getCollection("blog");
 
   return posts.map((entry) => ({
-    params: { post: entry.slug },
+    params: { post: entry.id },
     props: { entry },
   }));
 }) satisfies GetStaticPaths;
@@ -21,7 +22,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { post } = Astro.params as Params;
 const { entry } = Astro.props as Props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <MetaPage title={entry.data.title}>
