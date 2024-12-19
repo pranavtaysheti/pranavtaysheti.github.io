@@ -24,17 +24,21 @@ surface of earth) in the absense of
 be assumed to be at
 [Center of Mass](https://en.wikipedia.org/wiki/Center_of_mass)
 
-Now, Ignoring friction, Gravitational Force and Normal reaction force from the
-surface acts like a
-[Couple](https://en.wikipedia.org/wiki/Couple_(mechanics)) and applies
-Torque on the object, causing it to turn and fall.
-
 ![Torque due to gravity](@assets/blog/gravity-torque.png)
 
-## Opposing Torque
+Now, Ignoring friction, Gravitational Force and Normal reaction force from the
+surface acts like a
+[Couple](https://en.wikipedia.org/wiki/Couple_(mechanics)) and applies torque on the
+object. 
 
-Now, in order for Gyroscope to not be toppled, some torque should act in
-direction opposite to the torque due to couple of Gravity and Normal Force.
+Now the above diagram is exagrated, the couple doesn't need to be that large. 
+Even a tiniest of microscopic couple can tilt the object slightly. And this tilt will 
+increase the distance between CoM and PoC. Which causes more couple and then more tilt
+and so on...
+
+## How do you prevent fall?
+
+To prevent the fall, Imagine if the couple didnt have enough time to tilt the object.
 
 ## More Learning and Resources
 
