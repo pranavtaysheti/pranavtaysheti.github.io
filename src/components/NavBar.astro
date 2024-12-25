@@ -1,0 +1,21 @@
+---
+import NavLink from "@components/NavLink.astro";
+
+interface Props {
+    base: string;
+    links: Array<string>;
+}
+
+const { base, links } = Astro.props;
+---
+
+<nav class="flex gap-3 flex-row m-0 h-11 pt-1 items-baseline">
+    <a
+        class="text-slate-200 font-semibold font-JetBrains-Mono text-2xl px-4"
+        href="/"
+    >
+        {base}
+    </a>
+
+    {links.map((l) => <NavLink link={l} />)}
+</nav>

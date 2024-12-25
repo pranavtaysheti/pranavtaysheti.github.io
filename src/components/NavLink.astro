@@ -7,7 +7,7 @@ const { link } = Astro.props;
 ---
 
 <a
-  class={Astro.url.pathname === `${link}/`
+  class={Astro.url.pathname === `${link}`
     ? "font-bold text-slate-200 text-lg underline"
     : "font-bold text-slate-400 text-lg"}
   href={link}>{link}</a

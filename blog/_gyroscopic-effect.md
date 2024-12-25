@@ -24,7 +24,7 @@ surface of earth) in the absense of
 be assumed to be at
 [Center of Mass](https://en.wikipedia.org/wiki/Center_of_mass)
 
-![Torque due to gravity](@assets/blog/gravity-torque.png)
+![Torque due to gravity](gravity-torque.png)
 
 Now, Ignoring friction, Gravitational Force and Normal reaction force from the
 surface acts like a
