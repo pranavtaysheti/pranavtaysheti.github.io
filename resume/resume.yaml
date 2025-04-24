@@ -1,0 +1,160 @@
+basics:
+  name: Pranav Taysheti
+  label: Mechanical Engineer
+  email: pranavtaysheti@gmail.com
+  phone: +91-8888-6109-33
+  url: pranavtaysheti.github.io
+  summary: "Looking for job. TODO: Write better summary"
+
+  location:
+    address: "Gangashree bunglow, Nr. Bapatmala"
+    postalCode: "416416"
+    city: Sangli
+    countryCode: IN
+    region: Maharashtra
+
+  profiles:
+    - network: Linkedin
+      username: pranavtaysheti
+      url: https://www.linkedin.com/in/pranavtaysheti/
+
+    - network: Github
+      username: pranavtaysheti
+      url: https://www.github.com/pranavtaysheti/
+
+work:
+  - name: Veeresha Castings Pvt. Ltd.
+    position: CAD Intern
+    url: https://veereshacast.com/
+    startDate: 2022-08
+    endDate: 2022-12
+
+    highlights:
+      - Developed CAD models for castings for parts in production in 2 formats -
+        post machining and pre machining
+
+  - name: Allskiers Pvt. Ltd.
+    position: Finance Member
+    startDate: 2021-08
+    endDate: 2021-12
+
+    highlights:
+      - Analyzed the viability of the in development product in the market against
+        the market trends, competition, consumer taste, etc and made report on the same
+
+volunteer:
+  - organization: MotoManipal
+    position: Finance Lead
+    url: https://motomanipal.in/
+    startDate: 2019-08
+    endDate: 2021-08
+
+    highlights:
+      - Built and maintained a system for recording all internal and external
+        transactions of the organization using microsoft excel. and tracked expenses
+        throughout the period
+      - Onboarded several companies as sponsors for the organization.
+      - smoothly cleared pending and new PRs throughout the period and trained new
+        recruits for the same.
+
+education:
+  - institution: Manipal Institute of Technology, MAHE
+    url: "https://manipal.edu"
+    area: "Mechanical Engineering"
+    studyType: "Bachelor"
+    startDate: 2018-08
+    endDate: 2022-08
+    score: "6.36"
+
+certificates:
+  - name: The Complete Flutter Development Bootcamp with Dart
+    date: 2023-11-01
+    issuer: Udemy
+    url: https://www.udemy.com/certificate/UC-5489b8d5-4528-4654-b845-9e876721618e/
+
+  - name: JavaScript Algorithms and Data Structures
+    date: 2023-02-19
+    issuer: freeCodeCamp
+    url: https://www.freecodecamp.org/certification/pranavtaysheti/javascript-algorithms-and-data-structures
+
+  - name: "SQL Masterclass: SQL for Data Analytics"
+    date: 2022-09-27
+    issuer: Udemy
+    url: https://www.udemy.com/certificate/UC-00fce844-797f-487a-ada2-7ebb19d1de22/
+
+  - name: SOLIDWORKS 2017-21 :Become a Certified Associate Today-CSWA
+    date: 2022-10-11
+    issuer: Udemy
+    url: https://www.udemy.com/certificate/UC-d4fa4353-1c40-4778-944e-9be255a4cc48/
+
+  - name: Budgeting and Scheduling Projects
+    date: 2022-10-06
+    issuer: Coursera
+    url: https://coursera.org/verify/PUXGU8TLQF26
+
+  - name: "Excel Skills for Business: Essentials"
+    date: 2022-10-08
+    issuer: Coursera
+    url: https://coursera.org/verify/79N2H55DSJ9Z
+
+  - name: Introduction to Operations Management
+    date: 2022-10-23
+    issuer: Coursera
+    url: coursera.org/verify/JSCRNGYBXWHS
+
+  - name: Initiating and Planning Projects
+    date: 2022-09-12
+    issuer: Coursera
+    url: https://coursera.org/verify/F8GQ8UPC37ND
+
+  - name: What is Data Science?
+    date: 2022-10-25
+    issuer: Coursera
+    url: https://coursera.org/verify/4VMQQBKFTQ3J
+
+  - name: Python for Data Science, AI & Development
+    date: 2022-10-29
+    issuer: Coursera
+    url: https://coursera.org/verify/XPFBEM5RFLV2
+
+publications:
+  - name: Aqua-Vision (An underwater panoramic camera with computer vision and analytics
+    publisher: "Journal of Physics: Conference Series, Volume 2161, 28-30 October 2021, Manipal, India"
+    url: https://www.researchgate.net/publication/357762037_Aqua-Vision_An_underwater_panoramic_camera_with_computer_vision_and_analytics
+
+skills:
+  - name: SOLIDWORKS
+    keywords: [CAD, 3D]
+    level: Good
+
+  - name: Microsoft Excel
+    keywords: [Excel, Data Analysis, Finance Modelling, Automation]
+    level: Very Good
+
+  - name: Python Language
+    keywords:
+      [
+        Python,
+        Programming,
+        Automation,
+        Scripting,
+        Data Analysis,
+        Data Modelling,
+      ]
+    level: Very Good
+
+  - name: Go Language
+    keywords: [Go, Programming, Backend]
+    level: Very Good
+
+  - name: JavaScript/ TypeScript
+    keywords: [Web Development]
+    level: Good
+
+  - name: SQL
+    keywords: [Database, SQL, PostgreSQL]
+    level: Good
+
+  - name: Nim Language
+    keywords: [Nim, Programming]
+    level: Good
