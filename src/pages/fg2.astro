@@ -1,9 +1,8 @@
 ---
 import MetaPage from "@layouts/MetaPage.astro";
-import Task from "src/fg2/components/Task.astro";
+import Task from "src/fg2/components/Task";
 ---
 
 <MetaPage title="FG.2">
-    <script src="../fg2/fg2.ts"></script>
-    <Task text="Hello World!" />
+    <Task client:only />
 </MetaPage>
