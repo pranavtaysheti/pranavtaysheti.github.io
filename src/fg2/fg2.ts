@@ -1,30 +1,45 @@
-import type { Reducer } from "preact/hooks";
+import { ulid, type ULID } from "ulid";
+import { Signal, signal } from "@preact/signals";
 
-const ls = window.localStorage
+interface Task {
+    title: string
+    ulid_: ULID
+    subtasks: Array<ULID>
+}
 
-export const initialState: string = (() => {
-    const root = ls.getItem("root");
-    if (root === null) {
-        return ""
-    } else {
-        return root
+interface State {
+    root: Task
+}
+
+const state: Signal<null | Task | Error> = signal(null)
+let db: null | IDBDatabase = null
+
+function initializaState() {
+    const request = window.indexedDB.open("root", 3)
+
+    request.onupgradeneeded = (e) => {
+        console.info("root database either doesnt exist or is outdated. updating to v3")
     }
-})()
 
-export const reducer: Reducer<string, [string, string]> = (state, action) => {
-    const [type, payload] = action
-    switch (type) {
-        case "o":
-            ls.setItem("root", payload);
-            const newState = ls.getItem("root");
-            if (newState === null) {
-                return ""
-            } else {
-                return newState
-            }
-
-
-        default:
-            throw new Error(`Unhandled action: ${action}`)
+    request.onerror = (e) => {
+        console.error("couldn't get/ create root database")
+        console.log((e.target as IDBOpenDBRequest).error?.message)
     }
+
+    request.onsuccess = (e) => {
+        db = (e.target as IDBOpenDBRequest).result
+    }
+}
+
+function initializeDatabase() {
+    if (db === null) {
+        console.error("cannot initilize null value db")
+        return
+    }
+
+    db.onerror = (e) => {
+        console.error(`database error: ${(e.target as IDBOpenDBRequest).error?.message}`)
+    }
+
+    
 }
