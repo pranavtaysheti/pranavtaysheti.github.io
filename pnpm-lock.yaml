@@ -13,19 +13,22 @@ importers:
         version: 0.4.8(@types/alpinejs@3.13.11)(alpinejs@3.14.9)
       '@astrojs/mdx':
         specifier: ^4.3.0
-        version: 4.3.0(astro@5.9.2(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))
+        version: 4.3.0(astro@5.9.3(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))
       '@astrojs/preact':
         specifier: ^4.1.0
         version: 4.1.0(@babel/core@7.27.4)(@types/node@24.0.1)(jiti@2.4.2)(preact@10.26.9)(yaml@2.8.0)
       '@astrojs/tailwind':
         specifier: ^6.0.2
-        version: 6.0.2(astro@5.9.2(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)
+        version: 6.0.2(astro@5.9.3(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)
       '@preact/signals':
         specifier: ^2.2.0
         version: 2.2.0(preact@10.26.9)
       astro:
-        specifier: ^5.9.2
-        version: 5.9.2(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
+        specifier: ^5.9.3
+        version: 5.9.3(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
+      idb:
+        specifier: ^8.0.3
+        version: 8.0.3
       preact:
         specifier: ^10.26.9
         version: 10.26.9
@@ -768,8 +771,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@5.9.2:
-    resolution: {integrity: sha512-K/zZlQOWMpamfLDOls5jvG7lrsjH1gkk3ESRZyZDCkVBtKHMF4LbjwCicm/iBb3mX3V/PerqRYzLbOy3/4JLCQ==}
+  astro@5.9.3:
+    resolution: {integrity: sha512-VReZrpUa/3rfeiVvsQ1A2M3ujDPI+pDGIYOMtXPEZwut8tZoEyealXXLjitgCsJ+3dunKGZbg4Eak6i+r0vniw==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -956,8 +959,8 @@ packages:
       supports-color:
         optional: true
 
-  decode-named-character-reference@1.1.0:
-    resolution: {integrity: sha512-Wy+JTSbFThEOXQIR2L6mxJvEs+veIzpmqD7ynWxMXGpnk3smkHQOp6forLdHsKpAMW9iJpaBBIxz285t1n1C3w==}
+  decode-named-character-reference@1.2.0:
+    resolution: {integrity: sha512-c6fcElNV6ShtZXmsgNgFFV5tVX2PaV4g+MOAkb8eXHvn6sryJBrZa9r0zV6+dtTyoCKxtDy5tyQ5ZwQuidtd+Q==}
 
   defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
@@ -1217,6 +1220,9 @@ packages:
 
   http-cache-semantics@4.2.0:
     resolution: {integrity: sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ==}
+
+  idb@8.0.3:
+    resolution: {integrity: sha512-LtwtVyVYO5BqRvcsKuB2iUMnHwPVByPCXFXOpuU96IZPPoPN6xjOGxZQ74pgSVVLQWtUOYgyeL4GE98BY5D3wg==}
 
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
@@ -2258,8 +2264,8 @@ packages:
       typescript: ^4.9.4 || ^5.0.2
       zod: ^3
 
-  zod@3.25.63:
-    resolution: {integrity: sha512-3ttCkqhtpncYXfP0f6dsyabbYV/nEUW+Xlu89jiXbTBifUfjaSqXOG6JnQPLtqt87n7KAmnMqcjay6c0Wq0Vbw==}
+  zod@3.25.64:
+    resolution: {integrity: sha512-hbP9FpSZf7pkS7hRVUrOjhwKJNyampPgtXKc3AN6DsWtoHsg2Sb4SQaS4Tcay380zSwd2VPo9G9180emBACp5g==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -2308,12 +2314,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.0(astro@5.9.2(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))':
+  '@astrojs/mdx@4.3.0(astro@5.9.3(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@mdx-js/mdx': 3.1.0(acorn@8.15.0)
       acorn: 8.15.0
-      astro: 5.9.2(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
+      astro: 5.9.3(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2353,9 +2359,9 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/tailwind@6.0.2(astro@5.9.2(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.2(astro@5.9.3(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.9.2(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
+      astro: 5.9.3(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
       autoprefixer: 10.4.21(postcss@8.5.5)
       postcss: 8.5.5
       postcss-load-config: 4.0.2(postcss@8.5.5)
@@ -2990,7 +2996,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.9.2(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0):
+  astro@5.9.3(@types/node@24.0.1)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -3050,9 +3056,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
-      zod: 3.25.63
-      zod-to-json-schema: 3.24.5(zod@3.25.63)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.63)
+      zod: 3.25.64
+      zod-to-json-schema: 3.24.5(zod@3.25.64)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.64)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -3261,7 +3267,7 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  decode-named-character-reference@1.1.0:
+  decode-named-character-reference@1.2.0:
     dependencies:
       character-entities: 2.0.2
 
@@ -3643,6 +3649,8 @@ snapshots:
 
   http-cache-semantics@4.2.0: {}
 
+  idb@8.0.3: {}
+
   import-meta-resolve@4.1.0: {}
 
   inline-style-parser@0.2.4: {}
@@ -3771,7 +3779,7 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
-      decode-named-character-reference: 1.1.0
+      decode-named-character-reference: 1.2.0
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
       micromark: 4.0.2
@@ -3929,7 +3937,7 @@ snapshots:
 
   micromark-core-commonmark@2.0.3:
     dependencies:
-      decode-named-character-reference: 1.1.0
+      decode-named-character-reference: 1.2.0
       devlop: 1.1.0
       micromark-factory-destination: 2.0.1
       micromark-factory-label: 2.0.1
@@ -4125,7 +4133,7 @@ snapshots:
 
   micromark-util-decode-string@2.0.1:
     dependencies:
-      decode-named-character-reference: 1.1.0
+      decode-named-character-reference: 1.2.0
       micromark-util-character: 2.1.1
       micromark-util-decode-numeric-character-reference: 2.0.2
       micromark-util-symbol: 2.0.1
@@ -4173,7 +4181,7 @@ snapshots:
     dependencies:
       '@types/debug': 4.1.12
       debug: 4.4.1
-      decode-named-character-reference: 1.1.0
+      decode-named-character-reference: 1.2.0
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.3
       micromark-factory-space: 2.0.1
@@ -4285,7 +4293,7 @@ snapshots:
       '@types/unist': 2.0.11
       character-entities-legacy: 3.0.0
       character-reference-invalid: 2.0.1
-      decode-named-character-reference: 1.1.0
+      decode-named-character-reference: 1.2.0
       is-alphanumerical: 2.0.1
       is-decimal: 2.0.1
       is-hexadecimal: 2.0.1
@@ -4965,15 +4973,15 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zod-to-json-schema@3.24.5(zod@3.25.63):
+  zod-to-json-schema@3.24.5(zod@3.25.64):
     dependencies:
-      zod: 3.25.63
+      zod: 3.25.64
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.63):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.64):
     dependencies:
       typescript: 5.8.3
-      zod: 3.25.63
+      zod: 3.25.64
 
-  zod@3.25.63: {}
+  zod@3.25.64: {}
 
   zwitch@2.0.4: {}

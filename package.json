@@ -15,7 +15,8 @@
     "@astrojs/preact": "^4.1.0",
     "@astrojs/tailwind": "^6.0.2",
     "@preact/signals": "^2.2.0",
-    "astro": "^5.9.2",
+    "astro": "^5.9.3",
+    "idb": "^8.0.3",
     "preact": "^10.26.9",
     "tailwindcss": "^3.4.17",
     "ulid": "^3.0.1"

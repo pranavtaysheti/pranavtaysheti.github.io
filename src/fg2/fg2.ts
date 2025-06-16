@@ -1,45 +1,44 @@
 import { ulid, type ULID } from "ulid";
 import { Signal, signal } from "@preact/signals";
+import { openDB, type DBSchema, type IDBPDatabase } from "idb";
 
-interface Task {
-    title: string
-    ulid_: ULID
-    subtasks: Array<ULID>
+export interface Task {
+    text: string
+    ulid_: ULID | "root"
+//    subtasks: Array<ULID>
 }
 
 interface State {
     root: Task
 }
 
-const state: Signal<null | Task | Error> = signal(null)
-let db: null | IDBDatabase = null
-
-function initializaState() {
-    const request = window.indexedDB.open("root", 3)
-
-    request.onupgradeneeded = (e) => {
-        console.info("root database either doesnt exist or is outdated. updating to v3")
-    }
-
-    request.onerror = (e) => {
-        console.error("couldn't get/ create root database")
-        console.log((e.target as IDBOpenDBRequest).error?.message)
-    }
-
-    request.onsuccess = (e) => {
-        db = (e.target as IDBOpenDBRequest).result
+interface DB extends DBSchema {
+    tasks: {
+        key: ULID | "root";
+        value: {
+            text: string
+        }
     }
 }
 
-function initializeDatabase() {
-    if (db === null) {
-        console.error("cannot initilize null value db")
-        return
+export const state: Signal<null | Task | Error> = signal(null)
+let db: IDBPDatabase<DB> = await openDB("tasks", 1, {
+    upgrade(db) {
+        db.createObjectStore("tasks")
     }
+})
 
-    db.onerror = (e) => {
-        console.error(`database error: ${(e.target as IDBOpenDBRequest).error?.message}`)
+await db.put("tasks", {text: "this is root task"}, "root")
+
+const rootTask = await db.get("tasks", "root")
+
+if (rootTask === undefined) {
+    console.error("Looks like key \"root\" was not found in db")
+    state.value = new Error("root task not found in db")
+} else {
+    state.value = {
+        text: rootTask.text,
+        ulid_: "root"
     }
-
-    
 }
+
