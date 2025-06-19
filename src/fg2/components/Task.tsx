@@ -1,22 +1,30 @@
-import type { ULID } from "ulid";
-import { state, type Task } from "../fg2";
+import {maxLayers, type Task} from "../fg2";
 
-export default function Task(props: {ulid_: ULID | "root"}) {
-    const task = state.value
-    
-    if (task === null) {
-        return (
-            <div> "LOADING..." </div>
-        )
-    }
-
-    if (task instanceof Error) {
-        return (
-            <div> {task.message} </div>
-        )
+function SubTasks(props: {l: number, tasks: Array<Task>}) {
+    if (props.l === maxLayers) {
+        return
     }
 
     return (
-        <input value={(state.value as Task).text} />
+        <div>
+            {props.tasks.map(i =>
+                <div> 
+                    <input value={i.text} onInput={(e) => {}} />
+                <div>
+                    <SubTasks l={props.l+1} tasks={props.tasks} />
+                </div>
+                </div>
+            )}
+        </div>
     )
 }
+
+export function Task(props: {task: Task}) {
+    return (
+        <div>
+            <h1 class={"text-white text-3xl"}> {props.task.text} </h1>
+            <SubTasks l={0} tasks={props.task.subtasks}/> 
+        </div>
+    )
+}
+
