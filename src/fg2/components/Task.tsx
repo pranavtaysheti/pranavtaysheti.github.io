@@ -1,6 +1,8 @@
-import {maxLayers, type Task} from "../fg2";
+import { updateTask } from "../lib/actions";
+import {maxLayers, type Task} from "../lib/state";
+import { type ULID } from "ulid";
 
-function SubTasks(props: {l: number, tasks: Array<Task>}) {
+function SubTasks(props: {l: number, parent_ulids: Array<ULID>, tasks: Array<Task>}) {
     if (props.l === maxLayers) {
         return
     }
@@ -10,9 +12,13 @@ function SubTasks(props: {l: number, tasks: Array<Task>}) {
             {props.tasks.map(i =>
                 <div> 
                     <input value={i.text} onInput={(e) => {}} />
-                <div>
-                    <SubTasks l={props.l+1} tasks={props.tasks} />
-                </div>
+                    
+                    <SubTasks
+                        l={props.l+1} 
+                        parent_ulids={[...props.parent_ulids, i.ulid_]}
+                        tasks={props.tasks} 
+                    />
+
                 </div>
             )}
         </div>
@@ -22,8 +28,20 @@ function SubTasks(props: {l: number, tasks: Array<Task>}) {
 export function Task(props: {task: Task}) {
     return (
         <div>
-            <h1 class={"text-white text-3xl"}> {props.task.text} </h1>
-            <SubTasks l={0} tasks={props.task.subtasks}/> 
+            <div 
+                class={"text-white text-3xl bg-slate-800 w-full overflow-hidden resize-none"}
+                contentEditable
+                role={"textbox"}
+                onInput={(e) => updateTask([], e.currentTarget.innerText)}
+            > 
+                {props.task.text} 
+            </div>
+
+            <SubTasks 
+                l={0}
+                parent_ulids={[props.task.ulid_]} 
+                tasks={props.task.subtasks}
+            /> 
         </div>
     )
 }

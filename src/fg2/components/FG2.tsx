@@ -1,4 +1,4 @@
-import { state } from "../fg2"
+import { state } from "../lib/state"
 import {Task} from "./Task"
 
 export default function FG2() {
