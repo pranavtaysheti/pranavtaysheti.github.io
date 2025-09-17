@@ -10,20 +10,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.8",
-    "@astrojs/mdx": "^4.3.0",
-    "@astrojs/preact": "^4.1.0",
+    "@astrojs/alpinejs": "^0.4.9",
+    "@astrojs/mdx": "^4.3.5",
+    "@astrojs/preact": "^4.1.1",
     "@astrojs/tailwind": "^6.0.2",
-    "@preact/signals": "^2.2.0",
-    "astro": "^5.9.3",
+    "@preact/signals": "^2.3.1",
+    "astro": "^5.13.8",
     "idb": "^8.0.3",
-    "preact": "^10.26.9",
+    "preact": "^10.27.2",
     "tailwindcss": "^3.4.17",
     "ulid": "^3.0.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
 }
