@@ -10,17 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.8",
-    "@astrojs/mdx": "^4.2.6",
-    "@astrojs/preact": "^4.0.11",
+    "@astrojs/alpinejs": "^0.4.9",
+    "@astrojs/mdx": "^4.3.9",
+    "@astrojs/preact": "^4.1.2",
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.7.13",
-    "preact": "^10.26.6",
-    "tailwindcss": "^3.4.17"
+    "astro": "^5.15.3",
+    "preact": "^10.27.2",
+    "tailwindcss": "^3.4.18"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.15",
-    "typescript": "^5.7.2"
+    "@tailwindcss/typography": "^0.5.19",
+    "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531"
 }
