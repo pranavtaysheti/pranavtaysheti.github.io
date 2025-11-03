@@ -1,10 +1,4 @@
 ---
-import type {
-  GetStaticPaths,
-  InferGetStaticParamsType,
-  InferGetStaticPropsType,
-} from "astro";
-
 import { getCollection, render } from "astro:content";
 import MetaPage from "@layouts/MetaPage.astro";
 
@@ -15,13 +9,10 @@ export const getStaticPaths = (async () => {
     params: { post: entry.id },
     props: { entry },
   }));
-}) satisfies GetStaticPaths;
+});
 
-type Params = InferGetStaticParamsType<typeof getStaticPaths>;
-type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-
-const { post } = Astro.params as Params;
-const { entry } = Astro.props as Props;
+const { post } = Astro.params;
+const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 

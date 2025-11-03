@@ -1,5 +1,5 @@
 ---
-import Page from "./Page.astro";
+import PaddedPage from "./PaddedPage.astro";
 
 interface Props {
   title: string;
@@ -8,8 +8,15 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<Page title={title}>
-  <article class="prose prose-invert prose-slate w-full">
-    <slot />
-  </article>
+<PaddedPage title={title}>
+  <div class="flex flex-row justify-center">
+    <article
+      class={`
+        prose prose-invert prose-slate 
+        w-full
+      `}
+    >
+      <slot />
+    </article>
+  </div>
 </Page>

@@ -1,0 +1,15 @@
+---
+import Page from "./Page.astro";
+
+interface Props {
+  title: string
+}
+
+const {title} = Astro.props
+---
+
+<Page title={title} size={"prose"}>
+  <div class="p-6 lg:p-20">
+    <slot />
+  </div>
+</Page>

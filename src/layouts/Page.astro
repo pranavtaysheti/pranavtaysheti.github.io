@@ -3,15 +3,24 @@ import Chrome from "@layouts/Chrome.astro";
 
 interface Props {
   title: string;
+  size: "prose" | "wide";
 }
 
-const { title } = Astro.props;
+const { title, size } = Astro.props;
 ---
 
 <Chrome title={title}>
   <div class="w-full flex flex-row justify-center">
     <div
-      class="bg-slate-800 border w-full border-slate-200 p-6 my-6 lg:my-20 lg:p-20 lg:w-5xl lg:max-w-4xl flex flex-row justify-center font-JetBrains-Mono"
+      class={`
+        bg-slate-800
+        border border-slate-200 
+        my-6
+        ${size == "prose" ? "lg:max-w-4xl" : "lg:max-w-6xl"}
+        lg:my-20
+        w-full 
+        font-normal font-Caudex
+      `}
     >
       <slot />
     </div>

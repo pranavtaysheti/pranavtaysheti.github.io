@@ -2,16 +2,16 @@ basics:
   name: Pranav Taysheti
   label: Mechanical Engineer
   email: pranavtaysheti@gmail.com
-  phone: +91-8888-6109-33
-  url: pranavtaysheti.github.io
+  phone: +918888610933
+  url: https://pranavtaysheti.github.io/
   summary: "Looking for job. TODO: Write better summary"
 
   location:
     address: "Gangashree bunglow, Nr. Bapatmala"
-    postalCode: "416416"
+    postalCode: 416416
     city: Sangli
-    countryCode: IN
-    region: Maharashtra
+    country: India
+    state: Maharashtra
 
   profiles:
     - network: Linkedin
@@ -42,6 +42,24 @@ work:
       - Analyzed the viability of the in development product in the market against
         the market trends, competition, consumer taste, etc and made report on the same
 
+project:
+  - name: Advent of Code (2024)
+    date: October 2025
+    skills: [Go, Python, Data Structures]
+    highlights:
+      - Completed all 50 challenges of Advent of Code without external aid or AI, 
+        demonstrating strong problem solving ability and self directed learning.
+      - Applied deep knowledge of data Structures and algorithms to develop solutions
+        in Go and Python.
+      - Strengthened coding skills in Go and Python through solving increasingly
+        complex computational problems.
+
+  # - name: ForkGlowy2
+  #   date: November 2025
+  #   skills: [TypeScript, JavaScript, Frontend, IndexedDB, Web APIs, Preact, React]
+  #   highlights:
+  #     - TODO
+
 volunteer:
   - organization: MotoManipal
     position: Finance Lead
@@ -58,13 +76,13 @@ volunteer:
         recruits for the same.
 
 education:
-  - institution: Manipal Institute of Technology, MAHE
+  - institute: Manipal Institute of Technology, MAHE
     url: "https://manipal.edu"
-    area: "Mechanical Engineering"
-    studyType: "Bachelor"
+    course: "Mechanical Engineering"
+    degree: "B.Tech"
     startDate: 2018-08
     endDate: 2022-08
-    score: "6.36"
+    CGPA: 6.36
 
 certificates:
   - name: The Complete Flutter Development Bootcamp with Dart
@@ -100,7 +118,7 @@ certificates:
   - name: Introduction to Operations Management
     date: 2022-10-23
     issuer: Coursera
-    url: coursera.org/verify/JSCRNGYBXWHS
+    url: https://coursera.org/verify/JSCRNGYBXWHS
 
   - name: Initiating and Planning Projects
     date: 2022-09-12
@@ -125,11 +143,11 @@ publications:
 skills:
   - name: SOLIDWORKS
     keywords: [CAD, 3D]
-    level: Good
+    level: 3
 
   - name: Microsoft Excel
     keywords: [Excel, Data Analysis, Finance Modelling, Automation]
-    level: Very Good
+    level: 4
 
   - name: Python Language
     keywords:
@@ -141,20 +159,41 @@ skills:
         Data Analysis,
         Data Modelling,
       ]
-    level: Very Good
+    level: 4
 
   - name: Go Language
     keywords: [Go, Programming, Backend]
-    level: Very Good
+    level: 4
 
   - name: JavaScript/ TypeScript
-    keywords: [Web Development]
-    level: Good
+    keywords: [
+      Web Development,
+      React,
+      Preact,
+      Astro,
+      Frontend,
+      TypeScript,
+      javascript,
+    ]
+    level: 3
 
   - name: SQL
     keywords: [Database, SQL, PostgreSQL]
-    level: Good
+    level: 3
 
   - name: Nim Language
     keywords: [Nim, Programming]
-    level: Good
+    level: 3
+
+languages:
+  - name: Marathi
+
+  - name: Kannada
+
+  - name: Hindi
+
+  - name: English
+    level: C1
+
+  - name: German
+    level: A1

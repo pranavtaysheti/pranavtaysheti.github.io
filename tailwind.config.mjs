@@ -4,7 +4,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				"JetBrains-Mono": ["JetBrains Mono", "monospace"]
+				"JetBrains-Mono": ["JetBrains Mono", "monospace"],
+				"Bitter": ["Bitter", "serif"],
+				"Caudex": ["Caudex", "serif"]
 			}
 		},
 	},

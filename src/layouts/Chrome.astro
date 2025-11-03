@@ -1,6 +1,5 @@
 ---
 import NavBar from "@components/NavBar.astro";
-import NavLink from "@components/NavLink.astro";
 
 interface Props {
   title: string;
@@ -21,13 +20,24 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>{`PT | ${title}`}</title>
   </head>
   <body class="bg-slate-900">
     <header
-      class="bg-slate-800 w-full h-12 m-0 shadow-slate-800 shadow-lg border-solid border-b-4 border-slate-200"
+      class="bg-slate-800
+      w-full h-12 m-0
+      shadow-slate-800 shadow-lg
+      border-solid border-b-4 border-slate-200"
     >
-      <NavBar base="PT.Blog_" links={["/blog"]} />
+      <NavBar base="PT.Blog_" links={["/blog", "/resume"]} />
     </header>
     <main class="w-full h-fit">
       <slot />
