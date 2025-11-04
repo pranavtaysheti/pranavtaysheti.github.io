@@ -3,10 +3,9 @@ import Chrome from "@layouts/Chrome.astro";
 
 interface Props {
   title: string;
-  size: "prose" | "wide";
 }
 
-const { title, size } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <Chrome title={title}>
@@ -16,7 +15,7 @@ const { title, size } = Astro.props;
         bg-slate-800
         border border-slate-200 
         my-6
-        ${size == "prose" ? "lg:max-w-4xl" : "lg:max-w-6xl"}
+        lg:max-w-4xl
         lg:my-20
         w-full 
         font-normal font-Caudex

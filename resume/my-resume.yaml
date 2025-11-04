@@ -138,6 +138,7 @@ certificates:
 publications:
   - name: Aqua-Vision (An underwater panoramic camera with computer vision and analytics
     publisher: "Journal of Physics: Conference Series, Volume 2161, 28-30 October 2021, Manipal, India"
+    date: 2022-01
     url: https://www.researchgate.net/publication/357762037_Aqua-Vision_An_underwater_panoramic_camera_with_computer_vision_and_analytics
 
 skills:

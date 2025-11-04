@@ -1,17 +1,17 @@
 ---
 import Page from "@layouts/Page.astro";
-import MainSection from "@components/Resume/main-section.astro";
-
+import MainSection from "@components/Resume/MainSection.astro";
+import SidebarSection from "@components/Resume/SidebarSection.astro";
 import { getEntry } from "astro:content";
-import { number } from "astro:schema";
 const r = await getEntry("resume", "my-resume");
 ---
 
-<Page title="Resume" size="wide">
+<Page title="Resume">
   <main>
+    <!-- Name Header -->
     <div class="flex flex-row border-b border-slate-200 w-full p-6">
       <div class="w-80"></div>
-      <div>
+      <div class="w-full">
         <h1 class="font-Caudex font-bold text-5xl text-slate-100">
           {r?.data.basics.name}
         </h1>
@@ -20,8 +20,68 @@ const r = await getEntry("resume", "my-resume");
         </span>
       </div>
     </div>
+
     <div class="flex flex-row">
-      <div class="w-80 border-r border-slate-200"></div>
+      <!-- Sidebar -->
+      <div class="w-80 border-r border-slate-200 px-2">
+        <SidebarSection heading="Contact">
+          <div class="text-slate-200 align-middle">
+            <span class="font-Material-Sym align-bottom">{"\ue0b0"}</span>
+            {`+${r?.data.basics.phone}`}
+          </div>
+
+          <div class="text-slate-200 align-middle">
+            <span class="font-Material-Sym align-bottom">{"\ue158"}</span>
+            {`${r?.data.basics.email}`}
+          </div>
+
+          <div class="text-slate-200 align-middle">
+            <span class="font-Material-Sym align-bottom">{"\uf14d"}</span>
+            {
+              `${r?.data.basics.location.city}, 
+              ${r?.data.basics.location.country}`
+            }
+          </div>
+
+          <div class="text-slate-200 align-middle">
+            <span class="font-Material-Sym align-bottom">{"\ue157"}</span>
+            <a href={`${r?.data.basics.url}`}>
+              {`${r?.data.basics.url.slice(8, -1)}`}
+            </a>
+          </div>
+
+          <div>
+            {
+              r?.data.basics.profiles.map((p) => 
+                <div class="text-slate-200 align-middle">
+                  <span class="font-Material-Sym align-bottom">{"\uef83"}</span>
+                  <a href={`${p.url}`} target="_blank">{`${p.network}/${p.username}`}</a>
+                </div>
+              )
+            }
+          </div>
+        </SidebarSection>
+
+        <SidebarSection heading="Languages">
+          {
+            r?.data.languages.map((l) => 
+              <div class="text-slate-200"> 
+                {`${l.name} ${l.level ? `(${l.level})`:""}`}
+              </div>
+            )
+          }
+        </SidebarSection>
+
+        <SidebarSection heading="Skills">
+          {r?.data.skills.map((s) => 
+            <div class="text-slate-200">
+              {`${s.name}`}
+            </div>
+          )}
+        </SidebarSection>
+      </div>
+
+      <!-- Main Section -->
       <div class="flex flex-row justify-center w-full">
         <div class="w-full max-w-prose">
           <MainSection heading="Work Experience">
@@ -31,6 +91,7 @@ const r = await getEntry("resume", "my-resume");
                 .map((e) => (
                   <div class="py-2">
                     <h3 class="text-xl text-slate-100"> {e.name} </h3>
+
                     <div class="text-sm font-semibold text-slate-300">
                       {`
                       ${e.startDate.getMonth() + 1}/${e.startDate.getFullYear()}
@@ -38,6 +99,7 @@ const r = await getEntry("resume", "my-resume");
                       ${e.endDate.getMonth() + 1}/${e.endDate.getFullYear()}
                     `}
                     </div>
+
                     <ul class={`list-disc list-inside text-slate-200`}>
                       {e.highlights.map((h) => (
                         <li class="ml-1 pl-6 -indent-6">{h}</li>
@@ -55,14 +117,17 @@ const r = await getEntry("resume", "my-resume");
                 .map((e) => (
                   <div class="py-2">
                     <h3 class="text-xl text-slate-100"> {e.name}</h3>
+
                     <div class="text-sm font-semibold text-slate-300">
                       {`${e.date.getMonth() + 1}/${e.date.getFullYear()}`}{" "}
                     </div>
+
                     <ul class={`list-disc list-inside text-slate-200`}>
                       {e.highlights.map((h) => (
                         <li class="ml-1 pl-6 -indent-6">{h}</li>
                       ))}
                     </ul>
+
                     <div class="pt-1 text-slate-400">
                       {e.skills.map((s) => (
                         <span>{"#" + s + " "}</span>
@@ -74,33 +139,17 @@ const r = await getEntry("resume", "my-resume");
           </MainSection>
 
           <MainSection heading="Education">
-          {
-            r?.data.education
-              .sort((a, b) => b.startDate.getTime() - a.startDate.getTime())
-              .map((e) => (
-                <div class="py-2">
-                  <h3 class="text-xl text-slate-100">
-                    {`${e.degree} (${e.course})`}
-                  </h3>
-                  <h3 class="text-lg text-slate-100"> {e.institute} </h3>
-                  <div class="text-sm font-semibold text-slate-300">
-                    {`
-                      ${e.startDate.getMonth() + 1}/${e.startDate.getFullYear()}
-                      -
-                      ${e.endDate.getMonth() + 1}/${e.endDate.getFullYear()}
-                    `}
-                  </div>
-                </div>
-              ))
-          }
-          </MainSection>
-          <MainSection heading="Volunteer" >
             {
-              r?.data.volunteer
+              r?.data.education
                 .sort((a, b) => b.startDate.getTime() - a.startDate.getTime())
                 .map((e) => (
                   <div class="py-2">
-                    <h3 class="text-xl text-slate-100"> {e.organization} </h3>
+                    <h3 class="text-xl text-slate-100">
+                      {`${e.degree} (${e.course})`}
+                    </h3>
+
+                    <div class="text-lg text-slate-200"> {e.institute} </div>
+
                     <div class="text-sm font-semibold text-slate-300">
                       {`
                       ${e.startDate.getMonth() + 1}/${e.startDate.getFullYear()}
@@ -108,6 +157,27 @@ const r = await getEntry("resume", "my-resume");
                       ${e.endDate.getMonth() + 1}/${e.endDate.getFullYear()}
                     `}
                     </div>
+                  </div>
+                ))
+            }
+          </MainSection>
+
+          <MainSection heading="Volunteer">
+            {
+              r?.data.volunteer
+                .sort((a, b) => b.startDate.getTime() - a.startDate.getTime())
+                .map((e) => (
+                  <div class="py-2">
+                    <h3 class="text-xl text-slate-100"> {e.organization} </h3>
+
+                    <div class="text-sm font-semibold text-slate-300">
+                      {`
+                      ${e.startDate.getMonth() + 1}/${e.startDate.getFullYear()}
+                      -
+                      ${e.endDate.getMonth() + 1}/${e.endDate.getFullYear()}
+                    `}
+                    </div>
+
                     <ul class={`list-disc list-inside text-slate-200`}>
                       {e.highlights.map((h) => (
                         <li class="ml-1 pl-6 -indent-6">{h}</li>
@@ -116,10 +186,27 @@ const r = await getEntry("resume", "my-resume");
                   </div>
                 ))
             }
-
           </MainSection>
 
-          <MainSection heading="Publications" />
+          <MainSection heading="Publications">
+            {
+              r?.data.publications
+                .sort((a, b) => b.date.getTime() - a.date.getTime())
+                .map((e) => (
+                  <div class="py-2">
+                    <h3 class="text-xl text-slate-100"> {e.name} </h3>
+
+                    <div class="text-lg text-slate-200 underline">
+                      <a href={e.url} target="_blank">{`${e.publisher}`}</a>
+                    </div>
+
+                    <div class="text-sm font-semibold text-slate-300">
+                      {`${e.date.getMonth() + 1}/${e.date.getFullYear()}`}
+                    </div>
+                  </div>
+                ))
+            }
+          </MainSection>
         </div>
       </div>
     </div>

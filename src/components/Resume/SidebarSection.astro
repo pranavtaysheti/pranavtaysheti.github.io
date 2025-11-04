@@ -1,0 +1,12 @@
+---
+interface Props {
+  heading: string
+}
+
+const { heading } = Astro.props
+---
+<div class="py-4">
+  <h2 class="text-xl text-slate-100">{heading}</h2>
+  <hr class="pb-2" />
+  <slot/>
+</div>

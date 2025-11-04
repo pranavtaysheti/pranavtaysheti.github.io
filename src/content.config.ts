@@ -82,6 +82,7 @@ const resume = defineCollection({
         publications: z.array(z.object({
             name: z.string(),
             publisher: z.string(),
+            date: z.coerce.date(),
             url: z.string().url(),
         })),
 
@@ -89,6 +90,11 @@ const resume = defineCollection({
             name: z.string(),
             keywords: z.array(z.string()),
             level: z.number().int().min(1).max(5)
+        })),
+
+        languages: z.array(z.object({
+            name: z.string(),
+            level: z.optional(z.string())
         }))
     })
 })

@@ -4,9 +4,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				"JetBrains-Mono": ["JetBrains Mono", "monospace"],
-				"Bitter": ["Bitter", "serif"],
-				"Caudex": ["Caudex", "serif"]
+				"JetBrains-Mono": "JetBrains Mono",
+				"Caudex": "Caudex",
+				"Material-Sym": "Material Symbols Outlined"
 			}
 		},
 	},
