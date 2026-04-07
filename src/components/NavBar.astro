@@ -19,8 +19,7 @@ const { base, links } = Astro.props;
     links.map((l) => (
       <a
         class={`
-          font-bold text-lg
-          font-JetBrains-Mono
+          font-bold text-lg font-mono
           ${Astro.url.pathname.startsWith(l)
             ? "text-slate-200 underline"
             : "text-slate-400"

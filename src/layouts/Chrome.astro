@@ -1,11 +1,14 @@
 ---
 import NavBar from "@components/NavBar.astro";
+import { Font } from "astro:assets";
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -15,56 +18,12 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.svg" />
 
-    <!-- Google Fonts Preconfig -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Fonts -->
-    <!-- JetBrains Mono -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Caudex -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Icons  -->
-    <!-- Phone -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call"
-    />
-
-    <!-- Mail -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mail"
-    />
-
-    <!-- Home Location -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home_pin"
-    />
-
-    <!-- Link -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=link"
-    />
-
-    <!-- Bubble -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=bubble"
-    />
+    <Font cssVariable="--font-jetbrains-mono" />
+    <Font cssVariable="--font-lora" />
 
     <title>{`PT | ${title}`}</title>
   </head>
+
   <body class="bg-slate-900">
     <header
       class="bg-slate-800
@@ -75,6 +34,7 @@ const { title } = Astro.props;
       <NavBar base="PT.Blog_" links={["/blog"]} />
     </header>
     <main class="w-full h-fit">
+
       <slot />
     </main>
   </body>

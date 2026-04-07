@@ -1,5 +1,6 @@
-import { defineCollection, z } from "astro:content";
-import { glob, file } from "astro/loaders";
+import { defineCollection} from "astro:content";
+import { z } from "astro/zod"
+import { glob } from "astro/loaders";
 
 const blogCollection = defineCollection({
     loader: glob({ pattern: "**\/[^_]*.md", base: "./blog" }),
@@ -17,9 +18,9 @@ const resume = defineCollection({
         basics: z.object({
             name: z.string(),
             label: z.string(),
-            email: z.string().email(),
+            email: z.email(),
             phone: z.number(),
-            url: z.string().url(),
+            url: z.url(),
             summary: z.string(),
 
             location: z.object({
@@ -33,14 +34,14 @@ const resume = defineCollection({
             profiles: z.array(z.object({
                 network: z.string(),
                 username: z.string(),
-                url: z.string().url(),
+                url: z.url(),
             })),
         }),
 
         work: z.array(z.object({
             name: z.string(),
             position: z.string(),
-            url: z.string().url().optional(),
+            url: z.url().optional(),
             startDate: z.coerce.date(),
             endDate: z.coerce.date(),
             highlights: z.array(z.string())
@@ -56,7 +57,7 @@ const resume = defineCollection({
         volunteer: z.array(z.object({
             organization: z.string(),
             position: z.string(),
-            url: z.string().url().optional(),
+            url: z.url().optional(),
             startDate: z.coerce.date(),
             endDate: z.coerce.date(),
             highlights: z.array(z.string())
@@ -64,7 +65,7 @@ const resume = defineCollection({
 
         education: z.array(z.object({
             institute: z.string(),
-            url: z.string().url(),
+            url: z.url(),
             course: z.string(),
             degree: z.string(),
             startDate: z.coerce.date(),
@@ -76,14 +77,14 @@ const resume = defineCollection({
             name: z.string(),
             date: z.coerce.date(),
             issuer: z.string(),
-            url: z.string().url()
+            url: z.url()
         })),
 
         publications: z.array(z.object({
             name: z.string(),
             publisher: z.string(),
             date: z.coerce.date(),
-            url: z.string().url(),
+            url: z.url(),
         })),
 
         skills: z.array(z.object({
