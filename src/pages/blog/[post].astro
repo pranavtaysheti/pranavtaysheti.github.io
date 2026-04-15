@@ -1,22 +1,22 @@
 ---
 import { getCollection, render } from "astro:content";
-import MetaPage from "@layouts/MetaPage.astro";
+import ProsePage from "@layouts/ProsePage.astro";
 
-export const getStaticPaths = (async () => {
+export const getStaticPaths = async () => {
   const posts = await getCollection("blog");
 
   return posts.map((entry) => ({
     params: { post: entry.id },
     props: { entry },
   }));
-});
+};
 
 const { post } = Astro.params;
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<MetaPage title={entry.data.title}>
+<ProsePage title={entry.data.title}>
   <header>
     <h1 class="text-4xl font-extrabold text-slate-50">{entry.data.title}</h1>
     <span class="text-slate-400"
@@ -33,4 +33,4 @@ const { Content } = await render(entry);
   <main class="prose prose-invert prose-slate">
     <Content />
   </main>
-</MetaPage>
+</ProsePage>

@@ -117,7 +117,7 @@ Now, looking back at the layout of keyboard I realized that our keypad has only
 To understand it better, lets divide MidBot string into sections:
 `^^<A | <A | >vvA | >A`. each section contains: `0-1 step vertically` + `0-2 
 steps horizontally` + `A`. This gives us just 23 combinations of movements 
-(including one NoOp)! Since, all the robots from MidBot onwards are controlling identical keyboards, the entire command is just combination of these 30 small sub-strings! Irrespective of at which layer the robot is sitting at.
+(including one NoOp)! Since, all the robots from MidBot onwards are controlling identical keyboards, the entire command is just combination of these 23 small sub-strings! Irrespective of at which layer the robot is sitting at.
 
 Also, observe that all the sub-strings end at `A`. This means that at the end of
 first sub-string, the arm of robot reaches back to `A`, and at the start of 2nd
