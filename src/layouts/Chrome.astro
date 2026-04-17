@@ -1,12 +1,14 @@
 ---
 import NavBar from "@components/NavBar.astro";
-import NavLink from "@components/NavLink.astro";
+import { Font } from "astro:assets";
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -15,21 +17,24 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
+
+    <Font cssVariable="--font-jetbrains-mono" />
+    <Font cssVariable="--font-lora" />
+
     <title>{`PT | ${title}`}</title>
   </head>
+
   <body class="bg-slate-900">
     <header
-      class="bg-slate-800 w-full h-12 m-0 shadow-slate-800 shadow-lg border-solid border-b-4 border-slate-200"
+      class="bg-slate-800
+      w-full h-12 m-0
+      shadow-slate-800 shadow-lg
+      border-solid border-b-4 border-slate-200"
     >
       <NavBar base="PT.Blog_" links={["/blog"]} />
     </header>
     <main class="w-full h-fit">
+
       <slot />
     </main>
   </body>

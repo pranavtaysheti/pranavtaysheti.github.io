@@ -16,3 +16,7 @@ My Personal Homepage and Blog. Very moch a work in progress RN.
     - [ ] Search Bar (using "tagify")
       - [ ] Fuzzy Search using "fuse"
       - [ ] Filtering Tags
+
+## License
+
+All Rights Reserved

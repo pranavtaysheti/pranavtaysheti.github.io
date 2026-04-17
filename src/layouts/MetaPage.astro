@@ -1,5 +1,5 @@
 ---
-import Page from "./Page.astro";
+import ProsePage from "./ProsePage.astro";
 
 interface Props {
   title: string;
@@ -8,11 +8,11 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<Page title={title}>
+<ProsePage title={title}>
   <div class="flex flex-row justify-center w-full">
     <div class="w-full max-w-prose">
       <h1 class="text-4xl text-slate-50 font-extrabold mb-8">{title}</h1>
       <slot />
     </div>
   </div>
-</Page>
+</ProsePage>

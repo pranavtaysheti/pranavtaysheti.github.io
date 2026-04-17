@@ -1,8 +1,9 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection} from "astro:content";
+import { z } from "astro/zod"
 import { glob } from "astro/loaders";
 
 const blogCollection = defineCollection({
-    loader: glob({ pattern: "**\/[^_]*.md", base: ".//blog" }),
+    loader: glob({ pattern: "**\/[^_]*.md", base: "./blog" }),
     schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -11,6 +12,95 @@ const blogCollection = defineCollection({
     })
 })
 
+const resume = defineCollection({
+    loader: glob({pattern: "**\/[^_]*.yaml",base: "./resume"}),
+    schema: z.object({
+        basics: z.object({
+            name: z.string(),
+            label: z.string(),
+            email: z.email(),
+            phone: z.number(),
+            url: z.url(),
+            summary: z.string(),
+
+            location: z.object({
+                address: z.string(),
+                postalCode: z.number(),
+                city: z.string(),
+                country: z.string(),
+                state: z.string()
+            }),
+
+            profiles: z.array(z.object({
+                network: z.string(),
+                username: z.string(),
+                url: z.url(),
+            })),
+        }),
+
+        work: z.array(z.object({
+            name: z.string(),
+            position: z.string(),
+            url: z.url().optional(),
+            startDate: z.coerce.date(),
+            endDate: z.coerce.date(),
+            highlights: z.array(z.string())
+        })),
+
+        project: z.array(z.object({
+            name: z.string(),
+            date: z.coerce.date(),
+            skills: z.array(z.string()),
+            highlights: z.array(z.string())
+        })),
+
+        volunteer: z.array(z.object({
+            organization: z.string(),
+            position: z.string(),
+            url: z.url().optional(),
+            startDate: z.coerce.date(),
+            endDate: z.coerce.date(),
+            highlights: z.array(z.string())
+        })),
+
+        education: z.array(z.object({
+            institute: z.string(),
+            url: z.url(),
+            course: z.string(),
+            degree: z.string(),
+            startDate: z.coerce.date(),
+            endDate: z.coerce.date(),
+            CGPA: z.number()
+        })),
+
+        certificates: z.array(z.object({
+            name: z.string(),
+            date: z.coerce.date(),
+            issuer: z.string(),
+            url: z.url()
+        })),
+
+        publications: z.array(z.object({
+            name: z.string(),
+            publisher: z.string(),
+            date: z.coerce.date(),
+            url: z.url(),
+        })),
+
+        skills: z.array(z.object({
+            name: z.string(),
+            keywords: z.array(z.string()),
+            level: z.number().int().min(1).max(5)
+        })),
+
+        languages: z.array(z.object({
+            name: z.string(),
+            level: z.optional(z.string())
+        }))
+    })
+})
+
 export const collections = {
-    "blog": blogCollection
+    "blog": blogCollection,
+    "resume": resume
 }

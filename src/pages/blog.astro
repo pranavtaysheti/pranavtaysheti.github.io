@@ -1,5 +1,4 @@
 ---
-import BlogCard from "@components/BlogCard.astro";
 import MetaPage from "@layouts/MetaPage.astro";
 import { getCollection } from "astro:content";
 
@@ -7,5 +6,24 @@ const allBlogPosts = await getCollection("blog");
 ---
 
 <MetaPage title="Blog">
-  {allBlogPosts.map((post) => <BlogCard post={post} />)}
+  {
+    allBlogPosts.map((post) => (
+      <div>
+        <div class="mb-2">
+          <h2 class="text-slate-50 text-2xl underline underline-offset-2 font-bold">
+            <a href={`/blog/${post.id}`}>{post.data.title}</a>
+          </h2>
+          <p class="text-slate-400">
+            {post.data.date.toLocaleDateString("en-IN", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
+        </div>
+        <p class="text-slate-300">{post.data.description}</p>
+        <hr class="my-3" />
+      </div>
+    ))
+  }
 </MetaPage>
