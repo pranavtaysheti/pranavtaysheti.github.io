@@ -104,7 +104,7 @@ not going to work. I needed something smarter.
 
 ## [Dynamic Programming][2] Solution
 
-[2]:(https://en.wikipedia.org/wiki/Dynamic_programming)
+[2]:https://en.wikipedia.org/wiki/Dynamic_programming
 
 I would need super computer to work with strings that large. But wait! AoC only
 asked me to find length of smallest string, not the exact string. But, I couldn't
@@ -128,7 +128,7 @@ Combining the above disovery with the fact that addition is an [Commutative][3]
 property, all we need to store is a map of sub-strings and no. of times it occurs.
 This provides enough data for next layer to expand upon.
 
-[3]:[https://en.wikipedia.org/wiki/Commutative_property]
+[3]:https://en.wikipedia.org/wiki/Commutative_property
 
 And since our substrings are independent, we can find the expansions of each
 possible substring ahead of runtime and that is the approach I took.
@@ -140,7 +140,7 @@ I do not have definite "math" for why it works.
 Here is the [code][4] I used to find the expansions, Its not the best but its
 readable enough.
 
-[4]: (https://github.com/pranavtaysheti/advent-of-code/blob/main/2024/21/generate/expansions.py)
+[4]: https://github.com/pranavtaysheti/advent-of-code/blob/main/2024/21/generate/expansions.py
 
 And the last part is simple dumb substitution at each layer. This approach solves
 P2 in just few ms in my go solution. and perhaps it can solve the problem with
