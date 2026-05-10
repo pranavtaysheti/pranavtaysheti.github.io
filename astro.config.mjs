@@ -1,9 +1,9 @@
 import { defineConfig, fontProviders } from 'astro/config';
 import mdx from "@astrojs/mdx";
 
-import preact from "@astrojs/preact";
-
 import tailwindcss from '@tailwindcss/vite';
+
+import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
