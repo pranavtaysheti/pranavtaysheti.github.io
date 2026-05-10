@@ -317,9 +317,8 @@ worried about hitting limits of `int64`.
 ### Big O Notation
 
 Each expansion step operates over a `map` whose maximum size is 23 for the given
-keypad. which is practically constant time. `expand` function is called once at every *layer* so the big O notation is:
-
-$$O(L)$$
+keypad. which is practically constant time. `expand` function is called once at
+every *layer* so the big O notation is: **O(L)**
 
 where, L = No. of Layers
 
