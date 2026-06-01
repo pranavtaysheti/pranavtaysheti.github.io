@@ -1,24 +1,18 @@
 import { state } from "../lib/state"
-import {Task} from "./Task"
+import { TaskWidget } from "./Task"
 
 export default function FG2() {
-    const rootTask = state.value
+  const rootTask = state.root.value
 
-    if (rootTask === null) {
-        return (
-            <div> "LOADING..." </div>
-        )
-    }
-
-    if (rootTask instanceof Error) {
-        return (
-            <div> {rootTask.message} </div>
-        )
-    }
-
+  if (rootTask === null) {
     return (
-        <div>
-            <Task task={rootTask.root}/>         
-        </div>
+      <div> "LOADING..." </div>
     )
+  }
+
+  return (
+    <div>
+      <TaskWidget task={rootTask} />
+    </div>
+  )
 }
