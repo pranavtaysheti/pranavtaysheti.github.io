@@ -6,14 +6,12 @@ const MAX_LAYERS = 1
 export function TaskWidget({ task }: { task: Task }) {
   return (
     <div>
-      <div
+      <textarea
         class={"text-white text-3xl bg-slate-800 w-full overflow-hidden resize-none"}
-        contentEditable
-        role={"textbox"}
-        onInput={(e) => state.updateTaskText(task, e.currentTarget.innerText)}
+        onInput={(e) => state.updateTaskText(task, e.currentTarget.value)}
       >
-        {task.text}
-      </div>
+        {task.text.value}
+      </textarea>
     </div>
   )
 }

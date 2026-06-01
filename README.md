@@ -1,6 +1,6 @@
 # pranavtaysheti.github.io
 
-My Personal Homepage and Blog. Very moch a work in progress RN.
+WIP
 
 ## TODOs
 

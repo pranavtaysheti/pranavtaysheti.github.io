@@ -88,3 +88,4 @@ class State {
 }
 
 export const state = new State()
+state.init(0)

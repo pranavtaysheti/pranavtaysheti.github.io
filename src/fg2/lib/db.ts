@@ -22,14 +22,14 @@ export const db: IDBPDatabase<DB> = await openDB("fg2", 1, {
     upgrade(database, oldVersion, newVersion, transaction, event) {
         const root_ulid = ulid();
 
-        db.createObjectStore("tasks");
+        database.createObjectStore("tasks");
         transaction.objectStore("tasks").put({
             text: "Welcome to Project FG2!",
             subtasks: [],
         }, root_ulid);
 
-        db.createObjectStore("metadata");
-        transaction.objectStore("metadata").put("root", root_ulid)
+        database.createObjectStore("metadata");
+        transaction.objectStore("metadata").put(root_ulid, "root")
     },
 });
 
@@ -49,7 +49,7 @@ export const getNamedULID = async (name: string): Promise<ULID> => {
     const task_id = await db.get("metadata", name)
 
     if (task_id == undefined) {
-        throw new Error(`getNamedULID: named task ${name} doesn't exist`)
+        throw new Error(`getNamedULID: named task: ${name} doesn't exist`)
     }
 
     return task_id
