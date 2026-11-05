@@ -10,19 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^6.0.1",
-    "@astrojs/preact": "^5.1.4",
-    "@preact/signals": "^2.9.1",
-    "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.4.2",
-    "idb": "^8.0.3",
-    "preact": "^10.29.2",
+    "@astrojs/mdx": "^8.1.2",
+    "@astrojs/preact": "^6.1.1",
+    "@preact/signals": "^2.11.4",
+    "@tailwindcss/vite": "^4.3.4",
+    "astro": "^7.4.5",
+    "idb": "^8.0.4",
+    "preact": "^10.29.8",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.3.0",
+    "tailwindcss": "^4.3.4",
     "ulid": "^3.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/typography": "^0.5.20",
     "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1"
